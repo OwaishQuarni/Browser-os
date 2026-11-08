@@ -1,6 +1,8 @@
 name: Build Browser OS ISO
 on:
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +18,8 @@ jobs:
             syslinux syslinux-common isolinux grub-efi-amd64-bin grub-pc-bin zstd ca-certificates
       - name: Build ISO
         run: bash build.sh
-      - uses: actions/upload-artifact@v4
+      - uses: softprops/action-gh-release@v2
         with:
-          name: BrowserOS-iso
-          path: BrowserOS.iso
+          tag_name: latest
+          name: Browser OS (latest build)
+          files: BrowserOS.iso
