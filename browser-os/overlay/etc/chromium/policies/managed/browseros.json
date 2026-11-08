@@ -1,0 +1,11 @@
+{
+  "HomepageLocation": "http://localhost:8080/",
+  "HomepageIsNewTabPage": false,
+  "RestoreOnStartup": 4,
+  "RestoreOnStartupURLs": ["http://localhost:8080/"],
+  "ShowHomeButton": true,
+  "DefaultBrowserSettingEnabled": false,
+  "MetricsReportingEnabled": false,
+  "PasswordManagerEnabled": false,
+  "BackgroundModeEnabled": false
+}
